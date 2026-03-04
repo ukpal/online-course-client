@@ -47,6 +47,14 @@ export default function CourseSidebar({ course }) {
     );
   };
 
+  const handleBuyNow = () => {
+    if (!inCart) {
+      addToCart(course);
+    }
+    // Redirect to checkout page
+    window.location.href = '/checkout';
+  };
+
   return (
     <div className="sticky top-28">
       <div className="card bg-base-100 border border-base-300 shadow-xl overflow-hidden">
@@ -117,7 +125,10 @@ export default function CourseSidebar({ course }) {
                 )}
               </button>
 
-              <button className="btn btn-outline w-full rounded-lg text-base mb-2">
+              <button 
+                onClick={handleBuyNow}
+                className="btn btn-outline w-full rounded-lg text-base mb-2"
+              >
                 Buy Now
               </button>
             </>
