@@ -33,14 +33,15 @@ export default function AnalyticsPage() {
       {/* Enrollment Chart */}
       <div className="bg-base-100 border border-base-300/50 rounded-2xl p-5">
         <h3 className="font-bold mb-4">Enrollment Trends</h3>
-        <div className="flex items-end gap-2 h-48">
+        <div className="flex items-end gap-2 h-55">
           {revenueData.monthly.map((d, i) => {
             const height = (d.students / maxStudents) * 100;
             return (
               <div key={d.month} className="flex-1 flex flex-col items-center gap-1 group">
-                <span className="text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity">{d.students.toLocaleString()}</span>
-                <div className="w-full flex items-end justify-center" style={{ height: "100%" }}>
-                  <div className="w-full max-w-8 rounded-t-lg bg-info/30 hover:bg-info/60 transition-colors" style={{ height: `${Math.max(height, 4)}%` }} />
+                <div className="w-full flex items-end justify-center" style={{ height: "220px" }}>
+                  <div className="relative w-full max-w-8 rounded-t-lg bg-info/30 hover:bg-info/60 transition-colors" style={{ height: `${Math.max(height, 4)}%` }}>
+                    <span className="absolute -top-5 text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity">{d.students.toLocaleString()}</span>
+                  </div>
                 </div>
                 <span className="text-[10px] opacity-50">{d.month}</span>
               </div>

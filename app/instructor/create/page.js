@@ -10,6 +10,8 @@ import {
   HiOutlinePlusCircle,
   HiOutlineTrash,
   HiOutlineCheck,
+  HiOutlineChevronUp,
+  HiOutlineChevronDown,
 } from "react-icons/hi";
 
 export default function CreateCoursePage() {
@@ -68,8 +70,62 @@ export default function CreateCoursePage() {
 
   const addLecture = (sectionIndex) => {
     setCourseData((prev) => {
-      const sections = [...prev.sections];
-      sections[sectionIndex].lectures.push({ title: "", duration: "" });
+      const sections = prev.sections.map((section, idx) =>
+        idx === sectionIndex
+          ? { ...section, lectures: [...section.lectures, { title: "", duration: "" }] }
+          : section
+      );
+      return { ...prev, sections };
+    });
+  };
+
+  const removeLecture = (sectionIndex, lectureIndex) => {
+    setCourseData((prev) => {
+      const sections = prev.sections.map((section, idx) =>
+        idx === sectionIndex
+          ? { ...section, lectures: section.lectures.filter((_, li) => li !== lectureIndex) }
+          : section
+      );
+      return { ...prev, sections };
+    });
+  };
+
+  const moveLectureUp = (sectionIndex, lectureIndex) => {
+    if (lectureIndex === 0) return;
+    setCourseData((prev) => {
+      const sections = prev.sections.map((section, idx) =>
+        idx === sectionIndex
+          ? {
+              ...section,
+              lectures: section.lectures.map((lecture, li) => {
+                if (li === lectureIndex - 1) return section.lectures[lectureIndex];
+                if (li === lectureIndex) return section.lectures[lectureIndex - 1];
+                return lecture;
+              }),
+            }
+          : section
+      );
+      return { ...prev, sections };
+    });
+  };
+
+  const moveLectureDown = (sectionIndex, lectureIndex) => {
+    setCourseData((prev) => {
+      const section = prev.sections[sectionIndex];
+      if (lectureIndex >= section.lectures.length - 1) return prev;
+      
+      const sections = prev.sections.map((sec, idx) =>
+        idx === sectionIndex
+          ? {
+              ...sec,
+              lectures: sec.lectures.map((lecture, li) => {
+                if (li === lectureIndex) return sec.lectures[lectureIndex + 1];
+                if (li === lectureIndex + 1) return sec.lectures[lectureIndex];
+                return lecture;
+              }),
+            }
+          : sec
+      );
       return { ...prev, sections };
     });
   };
@@ -215,6 +271,17 @@ export default function CreateCoursePage() {
                     const sections = [...courseData.sections]; sections[si].lectures[li].duration = e.target.value; updateField("sections", sections);
                   }} />
                   <div className="border-2 border-dashed border-base-300 rounded-lg px-2 py-1 text-[10px] opacity-40 cursor-pointer hover:border-primary whitespace-nowrap">Upload</div>
+                  <div className="flex gap-1">
+                    {li > 0 && (
+                      <button onClick={() => moveLectureUp(si, li)} className="btn btn-ghost btn-xs btn-square text-info" title="Move Up"><HiOutlineChevronUp className="w-4 h-4" /></button>
+                    )}
+                    {li < section.lectures.length - 1 && (
+                      <button onClick={() => moveLectureDown(si, li)} className="btn btn-ghost btn-xs btn-square text-info" title="Move Down"><HiOutlineChevronDown className="w-4 h-4" /></button>
+                    )}
+                  </div>
+                  {section.lectures.length > 1 && (
+                    <button onClick={() => removeLecture(si, li)} className="btn btn-ghost btn-xs btn-square text-error"><HiOutlineTrash className="w-4 h-4" /></button>
+                  )}
                 </div>
               ))}
               <button onClick={() => addLecture(si)} className="btn btn-ghost btn-xs text-primary gap-1 ml-6">

@@ -250,7 +250,7 @@ export default function SignupPage() {
               )}
             </div>
 
-            <label className="flex items-start gap-2 cursor-pointer">
+            <label className="flex items-center gap-2 cursor-pointer">
               <input
                 type="checkbox"
                 className="checkbox checkbox-primary checkbox-sm mt-0.5"

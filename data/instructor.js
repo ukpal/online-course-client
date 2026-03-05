@@ -31,11 +31,42 @@ export const revenueData = {
 };
 
 export const recentEnrollments = [
-  { id: 1, student: "Alex Morgan", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexM", course: "Complete Web Development Bootcamp", date: "2 hours ago", price: 14.99 },
-  { id: 2, student: "Priya Sharma", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaS", course: "Advanced CSS and Sass", date: "5 hours ago", price: 13.99 },
-  { id: 3, student: "Tom Bradley", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=TomB", course: "Complete Web Development Bootcamp", date: "8 hours ago", price: 14.99 },
-  { id: 4, student: "Sara Lee", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=SaraL", course: "AWS Certified Solutions Architect", date: "1 day ago", price: 18.99 },
-  { id: 5, student: "David Park", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=DavidP", course: "Complete Web Development Bootcamp", date: "1 day ago", price: 14.99 },
+  { id: 1, student: "Alex Morgan", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexM", course: "Complete Web Development Bootcamp", date: "2 hours ago", enrollmentDate: "2025-03-06", country: "United States", price: 14.99 },
+  { id: 2, student: "Priya Sharma", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaS", course: "Advanced CSS and Sass", date: "5 hours ago", enrollmentDate: "2025-03-06", country: "India", price: 13.99 },
+  { id: 3, student: "Tom Bradley", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=TomB", course: "Complete Web Development Bootcamp", date: "8 hours ago", enrollmentDate: "2025-03-06", country: "Canada", price: 14.99 },
+  { id: 4, student: "Sara Lee", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=SaraL", course: "AWS Certified Solutions Architect", date: "1 day ago", enrollmentDate: "2025-03-05", country: "Singapore", price: 18.99 },
+  { id: 5, student: "David Park", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=DavidP", course: "Complete Web Development Bootcamp", date: "1 day ago", enrollmentDate: "2025-03-05", country: "South Korea", price: 14.99 },
+];
+
+export const allEnrollments = [
+  { id: 1, student: "Alex Morgan", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=AlexM", course: "Complete Web Development Bootcamp", enrollmentDate: "2025-03-06", country: "United States", price: 14.99 },
+  { id: 2, student: "Priya Sharma", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=PriyaS", course: "Advanced CSS and Sass", enrollmentDate: "2025-03-06", country: "India", price: 13.99 },
+  { id: 3, student: "Tom Bradley", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=TomB", course: "Complete Web Development Bootcamp", enrollmentDate: "2025-03-06", country: "Canada", price: 14.99 },
+  { id: 4, student: "Sara Lee", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=SaraL", course: "AWS Certified Solutions Architect", enrollmentDate: "2025-03-05", country: "Singapore", price: 18.99 },
+  { id: 5, student: "David Park", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=DavidP", course: "Complete Web Development Bootcamp", enrollmentDate: "2025-03-05", country: "South Korea", price: 14.99 },
+  { id: 6, student: "Elena Rodriguez", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=ElenaR", course: "React Fundamentals", enrollmentDate: "2025-03-05", country: "Spain", price: 12.99 },
+  { id: 7, student: "Marco Rossi", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=MarcoR", course: "Advanced CSS and Sass", enrollmentDate: "2025-03-04", country: "Italy", price: 13.99 },
+  { id: 8, student: "Lisa Wang", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=LisaW", course: "Complete Web Development Bootcamp", enrollmentDate: "2025-03-04", country: "China", price: 14.99 },
+  { id: 9, student: "James Anderson", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=JamesA", course: "AWS Certified Solutions Architect", enrollmentDate: "2025-03-04", country: "Australia", price: 18.99 },
+  { id: 10, student: "Sophie Martin", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=SophieM", course: "Python for Data Science", enrollmentDate: "2025-03-03", country: "France", price: 15.99 },
+  { id: 11, student: "Ahmed Hassan", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=AhmedH", course: "Complete Web Development Bootcamp", enrollmentDate: "2025-03-03", country: "Egypt", price: 14.99 },
+  { id: 12, student: "Yuki Tanaka", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=YukiT", course: "React Fundamentals", enrollmentDate: "2025-03-03", country: "Japan", price: 12.99 },
+  { id: 13, student: "Maria Santos", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=MariaS", course: "Advanced CSS and Sass", enrollmentDate: "2025-03-02", country: "Brazil", price: 13.99 },
+  { id: 14, student: "Klaus Mueller", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=KlausM", course: "AWS Certified Solutions Architect", enrollmentDate: "2025-03-02", country: "Germany", price: 18.99 },
+  { id: 15, student: "Aisha Patel", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=AishaP", course: "Python for Data Science", enrollmentDate: "2025-03-02", country: "India", price: 15.99 },
+  { id: 16, student: "Liam O'Brien", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=LiamO", course: "Complete Web Development Bootcamp", enrollmentDate: "2025-03-01", country: "Ireland", price: 14.99 },
+  { id: 17, student: "Natasha Volkov", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=NatashaV", course: "React Fundamentals", enrollmentDate: "2025-03-01", country: "Russia", price: 12.99 },
+  { id: 18, student: "Carlos Garcia", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=CarlosG", course: "Advanced CSS and Sass", enrollmentDate: "2025-02-28", country: "Mexico", price: 13.99 },
+  { id: 19, student: "Eva Novak", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=EvaN", course: "AWS Certified Solutions Architect", enrollmentDate: "2025-02-28", country: "Hungary", price: 18.99 },
+  { id: 20, student: "Chen Wei", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=ChenW", course: "Python for Data Science", enrollmentDate: "2025-02-28", country: "Taiwan", price: 15.99 },
+];
+
+export const courses = [
+  "Complete Web Development Bootcamp",
+  "Advanced CSS and Sass",
+  "AWS Certified Solutions Architect",
+  "React Fundamentals",
+  "Python for Data Science",
 ];
 
 export const recentReviews = [

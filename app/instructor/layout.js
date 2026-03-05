@@ -21,11 +21,13 @@ import {
   HiOutlineBell,
   HiOutlineArrowLeft,
   HiOutlineChevronDown,
+  HiOutlineUsers
 } from "react-icons/hi";
 
 const sidebarLinks = [
   { href: "/instructor", label: "Dashboard", icon: HiOutlineHome },
   { href: "/instructor/courses", label: "My Courses", icon: HiOutlineBookOpen },
+  { href: "/instructor/enrollments", label: "Enrollments", icon: HiOutlineUsers },
   { href: "/instructor/create", label: "Create Course", icon: HiOutlinePlusCircle },
   { href: "/instructor/analytics", label: "Analytics", icon: HiOutlineChartBar },
   { href: "/instructor/reviews", label: "Reviews", icon: HiOutlineStar },

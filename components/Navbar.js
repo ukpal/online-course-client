@@ -251,7 +251,7 @@ export default function Navbar() {
                         </div>
 
                         {/* Menu Items */}
-                        <ul className="menu p-2 gap-0.5">
+                        <ul className="menu p-2 gap-0.5" style={{ width: '100%' }}>
                           <li>
                             <Link
                               href="/my-learning"

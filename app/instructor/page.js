@@ -60,21 +60,23 @@ export default function InstructorDashboard() {
             </div>
           </div>
 
-          <div className="flex items-end gap-2 h-48">
+          <div className="flex items-end gap-2 h-55">
             {revenueData.monthly.map((d, i) => {
               const height = (d.revenue / maxRevenue) * 100;
               const isCurrentMonth = i === revenueData.monthly.length - 1;
               return (
                 <div key={d.month} className="flex-1 flex flex-col items-center gap-1 group">
-                  <div className="relative w-full flex items-end justify-center" style={{ height: "100%" }}>
+                  <div className="relative w-full flex items-end justify-center" style={{ height: "200px" }}>
                     <div
-                      className={`w-full max-w-8 rounded-t-lg transition-all duration-500 cursor-pointer ${
+                      className={`relative w-full max-w-8 rounded-t-lg transition-all duration-500 cursor-pointer ${
                         isCurrentMonth ? "bg-primary" : "bg-primary/25 hover:bg-primary/50"
                       }`}
                       style={{ height: `${Math.max(height, 4)}%` }}
-                    />
+                    >
+
                     <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-neutral text-neutral-content text-[10px] px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
                       ${d.revenue.toLocaleString()}
+                    </div>
                     </div>
                   </div>
                   <span className={`text-[10px] ${isCurrentMonth ? "font-bold text-primary" : "opacity-50"}`}>
@@ -114,7 +116,7 @@ export default function InstructorDashboard() {
         <div className="bg-base-100 border border-base-300/50 rounded-2xl p-5">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-bold">Recent Enrollments</h3>
-            <Link href="/instructor/analytics" className="btn btn-ghost btn-xs text-primary gap-1">
+            <Link href="/instructor/enrollments" className="btn btn-ghost btn-xs text-primary gap-1">
               View All <HiOutlineArrowRight className="w-3 h-3" />
             </Link>
           </div>

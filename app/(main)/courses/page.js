@@ -278,7 +278,7 @@ export default function CoursesPage() {
             <SortDropdown sortBy={sortBy} setSortBy={setSortBy} />
 
             {/* View Toggle */}
-            <div className="hidden md:flex border border-base-300 rounded-full overflow-hidden">
+            <div className="hidden md:flex border border-base-300 rounded-full overflow-hidden" style={{width:'stretch'}}>
               <button
                 onClick={() => setViewMode("grid")}
                 className={`btn btn-sm btn-square border-none rounded-none ${viewMode === "grid"

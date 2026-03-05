@@ -65,28 +65,28 @@ export default function InstructorApplyPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     // Step 1: Personal Info
-    displayName: "",
-    professionalTitle: "",
-    bio: "",
-    website: "",
-    linkedin: "",
+    displayName: "Sarah Johnson",
+    professionalTitle: "Senior Full-Stack Developer at Tech Corp",
+    bio: "With over 8 years of experience in web development, I'm passionate about teaching others the skills needed to build modern web applications. I've mentored 20+ junior developers and love making complex concepts simple and accessible.",
+    website: "https://sarahjohnson.dev",
+    linkedin: "https://linkedin.com/in/sarahjohnson",
 
     // Step 2: Expertise
-    expertise: [],
-    experienceLevel: "",
+    expertise: ["Web Development", "UI/UX Design"],
+    experienceLevel: "expert",
     otherExpertise: "",
 
     // Step 3: Teaching Plan
-    courseTopics: "",
-    targetAudience: "",
-    existingAudience: "none",
-    videoExperience: "",
-    sampleVideoUrl: "",
+    courseTopics: "I plan to create comprehensive courses on React.js fundamentals, advanced React patterns, building full-stack applications with Next.js, and modern CSS techniques.",
+    targetAudience: "Beginner to intermediate web developers who want to learn modern JavaScript frameworks and build production-ready applications.",
+    existingAudience: "medium",
+    videoExperience: "experienced",
+    sampleVideoUrl: "https://youtube.com/watch?v=dQw4w9WgXcQ",
 
     // Step 4: Agreement
-    agreeTerms: false,
-    agreeGuidelines: false,
-    agreeRevenue: false,
+    agreeTerms: true,
+    agreeGuidelines: true,
+    agreeRevenue: true,
   });
 
   useEffect(() => {
